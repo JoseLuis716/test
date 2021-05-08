@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    var ListaProductos = ViewBag.ListaProductos;
+}
+
+<h2>Lista de productos</h2>
+<div class="container">
+    <div class="row">
+        @foreach (var prod in ListaProductos)
+        {
+
+
+            <div class="col-lg-4">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">@prod.Nombre</div>
+                    <div class="panel-body">
+                       <img class="img-responsive ajustable" src="@prod.Imagen" />
+                        <p>@prod.Descripcion</p>
+                        <p>$ @prod.Precio</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        }
+    </div>
+</div>
+
