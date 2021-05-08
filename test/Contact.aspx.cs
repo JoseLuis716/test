@@ -36,12 +36,11 @@ namespace test
 
             smtp.Host = "smtp.gmail.com";
             smtp.Port = 25; //465 o 587  Puertos que pueden servir...
-            smtp.Credentials = new NetworkCredential("joseluisrivera716@gmail.com", "18011997");
+            smtp.Credentials = new NetworkCredential("joseluisrivera716@gmail.com", "Tu y cachalote");
             smtp.EnableSsl = true;
             try
             {
                 smtp.Send(correo);
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Se ha enviado el correo al desarrollador')", true);
             }
             catch (Exception ex)
             {
