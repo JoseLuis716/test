@@ -1,0 +1,15 @@
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\bin\Debug\NEGOCIO.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\bin\Debug\NEGOCIO.pdb
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\bin\Debug\DATOS.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\bin\Debug\ENTIDAD.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\bin\Debug\EntityFramework.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\bin\Debug\DATOS.pdb
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\bin\Debug\DATOS.dll.config
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\bin\Debug\ENTIDAD.pdb
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\bin\Debug\EntityFramework.xml
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\bin\Debug\es\EntityFramework.resources.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\obj\Debug\NEGOCIO.csproj.AssemblyReference.cache
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\obj\Debug\NEGOCIO.csproj.CoreCompileInputs.cache
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\obj\Debug\NEGOCIO.csproj.CopyComplete
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\obj\Debug\NEGOCIO.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\NEGOCIO\obj\Debug\NEGOCIO.pdb

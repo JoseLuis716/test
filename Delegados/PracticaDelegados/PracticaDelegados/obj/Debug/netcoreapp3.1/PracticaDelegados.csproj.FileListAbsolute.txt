@@ -1,0 +1,13 @@
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\bin\Debug\netcoreapp3.1\PracticaDelegados.exe
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\bin\Debug\netcoreapp3.1\PracticaDelegados.deps.json
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\bin\Debug\netcoreapp3.1\PracticaDelegados.runtimeconfig.json
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\bin\Debug\netcoreapp3.1\PracticaDelegados.runtimeconfig.dev.json
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\bin\Debug\netcoreapp3.1\PracticaDelegados.dll
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\bin\Debug\netcoreapp3.1\PracticaDelegados.pdb
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\obj\Debug\netcoreapp3.1\PracticaDelegados.csprojAssemblyReference.cache
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\obj\Debug\netcoreapp3.1\PracticaDelegados.AssemblyInfoInputs.cache
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\obj\Debug\netcoreapp3.1\PracticaDelegados.AssemblyInfo.cs
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\obj\Debug\netcoreapp3.1\PracticaDelegados.csproj.CoreCompileInputs.cache
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\obj\Debug\netcoreapp3.1\PracticaDelegados.dll
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\obj\Debug\netcoreapp3.1\PracticaDelegados.pdb
+D:\Visual Studio Proyects\Delegados\PracticaDelegados\PracticaDelegados\obj\Debug\netcoreapp3.1\PracticaDelegados.genruntimeconfig.cache

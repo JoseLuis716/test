@@ -1,0 +1,6 @@
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\ENTIDAD\bin\Debug\ENTIDAD.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\ENTIDAD\bin\Debug\ENTIDAD.pdb
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\ENTIDAD\obj\Debug\ENTIDAD.csproj.AssemblyReference.cache
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\ENTIDAD\obj\Debug\ENTIDAD.csproj.CoreCompileInputs.cache
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\ENTIDAD\obj\Debug\ENTIDAD.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\ENTIDAD\obj\Debug\ENTIDAD.pdb

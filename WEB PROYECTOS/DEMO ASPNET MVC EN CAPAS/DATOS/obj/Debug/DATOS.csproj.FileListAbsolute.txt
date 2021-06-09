@@ -1,0 +1,16 @@
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\bin\Debug\DATOS.dll.config
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\bin\Debug\DATOS.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\bin\Debug\DATOS.pdb
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\bin\Debug\ENTIDAD.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\bin\Debug\EntityFramework.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\bin\Debug\ENTIDAD.pdb
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\bin\Debug\EntityFramework.xml
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\bin\Debug\es\EntityFramework.resources.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\obj\Debug\DATOS.csproj.AssemblyReference.cache
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\obj\Debug\DATOS.csproj.CoreCompileInputs.cache
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\obj\Debug\DATOS.csproj.CopyComplete
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\obj\Debug\DATOS.dll
+D:\Visual Studio Proyects\WEB PROYECTOS\DEMO ASPNET MVC EN CAPAS\DATOS\obj\Debug\DATOS.pdb

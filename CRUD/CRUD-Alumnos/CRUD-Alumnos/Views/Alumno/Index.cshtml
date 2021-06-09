@@ -1,0 +1,81 @@
+﻿@model IEnumerable<CRUD_Alumnos.Models.AlumnoCE>
+
+@{
+    ViewBag.Title = "LIsta de alumnos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Agregar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @* @Html.DisplayNameFor(model => model.Nombres)*@
+            Nombre Completo
+        </th>
+        <th>
+            Edad
+        </th>
+        <th>
+            Género
+        </th>
+        <th>
+            Ciudad
+        </th>
+        <th>
+            Fecha de Registro
+        </th>
+        <th>Acciones</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edad)
+            </td>
+            <td>
+                @{
+                    if (item.Genero.Equals("H") || item.Genero.Equals("h"))
+                    {
+                        <span>Hombre</span>
+                    }
+                    else
+                    {
+                        <span>Mujer</span>
+                    }
+                }
+            </td>
+            <td>
+                @*@CRUD_Alumnos.Controllers.AlumnoController.NombreCiudad(item.Cod_Ciudad)*@
+                @item.Nombre
+            </td>
+            <td>
+                @item.Fecha_Registro.ToShortDateString()
+                @*@Html.DisplayFor(modelItem => item.Fecha_Registro)*@
+            </td>
+            <td>
+                @*Estructura      Texto      ActionResult en el controlador      Parametro a enviar*@
+                @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                @Html.ActionLink("Detalles", "DetallesAlumno", new { id = item.Id }) |
+                @Html.ActionLink("Eliminar", "EliminarAlumno", new { id = item.Id }, new { @class = "aElimina" })
+            </td>
+        </tr>
+    }
+
+</table>
+@section scripts{
+    <script>
+        $('.aElimina').click(function(event){
+            if (!confirm('¿Seguro que quieres eliminar este usuario?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+}

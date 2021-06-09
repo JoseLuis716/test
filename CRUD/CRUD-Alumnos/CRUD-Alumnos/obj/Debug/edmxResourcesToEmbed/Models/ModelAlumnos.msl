@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AlumnosDBModelStoreContainer" CdmEntityContainer="AlumnosContext">
+    <EntitySetMapping Name="Alumnos">
+      <EntityTypeMapping TypeName="AlumnosDBModel.Alumnos">
+        <MappingFragment StoreEntitySet="Alumnos">
+          <ScalarProperty Name="Cod_Ciudad" ColumnName="Cod_Ciudad" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ciudad">
+      <EntityTypeMapping TypeName="AlumnosDBModel.Ciudad">
+        <MappingFragment StoreEntitySet="Ciudad">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

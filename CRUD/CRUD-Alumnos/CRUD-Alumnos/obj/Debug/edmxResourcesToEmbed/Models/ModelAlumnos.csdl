@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AlumnosDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AlumnosContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alumnos" EntityType="AlumnosDBModel.Alumnos" />
+    <EntitySet Name="Ciudad" EntityType="AlumnosDBModel.Ciudad" />
+    <AssociationSet Name="FK_Alumnos_Ciudad" Association="AlumnosDBModel.FK_Alumnos_Ciudad">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="Alumnos" EntitySet="Alumnos" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Alumnos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombres" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Apellidos" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Edad" Type="Int32" Nullable="false" />
+    <Property Name="Genero" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Fecha_Registro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Cod_Ciudad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ciudad" Relationship="AlumnosDBModel.FK_Alumnos_Ciudad" FromRole="Alumnos" ToRole="Ciudad" />
+  </EntityType>
+  <EntityType Name="Ciudad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Alumnos" Relationship="AlumnosDBModel.FK_Alumnos_Ciudad" FromRole="Ciudad" ToRole="Alumnos" />
+  </EntityType>
+  <Association Name="FK_Alumnos_Ciudad">
+    <End Type="AlumnosDBModel.Ciudad" Role="Ciudad" Multiplicity="1" />
+    <End Type="AlumnosDBModel.Alumnos" Role="Alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Alumnos">
+        <PropertyRef Name="Cod_Ciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

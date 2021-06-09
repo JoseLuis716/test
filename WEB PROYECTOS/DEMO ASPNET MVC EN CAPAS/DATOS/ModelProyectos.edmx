@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="proyectosdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Departamento">
+          <Key>
+            <PropertyRef Name="DepartamentoId" />
+          </Key>
+          <Property Name="DepartamentoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreDepartamento" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Empleado">
+          <Key>
+            <PropertyRef Name="EmpleadoId" />
+          </Key>
+          <Property Name="EmpleadoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombres" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Apellidos" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="celular" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DepartamentoId" Type="int" Nullable="false" />
+          <Property Name="ProyectoId" Type="int" />
+        </EntityType>
+        <EntityType Name="Proyecto">
+          <Key>
+            <PropertyRef Name="ProyectoId" />
+          </Key>
+          <Property Name="ProyectoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreProyecto" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="FechaInicio" Type="datetime" Nullable="false" />
+          <Property Name="FechaFin" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Empleado_Departamento">
+          <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="DepartamentoId" />
+            </Principal>
+            <Dependent Role="Empleado">
+              <PropertyRef Name="DepartamentoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Empleado_Proyecto">
+          <End Role="Proyecto" Type="Self.Proyecto" Multiplicity="0..1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proyecto">
+              <PropertyRef Name="ProyectoId" />
+            </Principal>
+            <Dependent Role="Empleado">
+              <PropertyRef Name="ProyectoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="proyectosdbModelStoreContainer">
+          <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Proyecto" EntityType="Self.Proyecto" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Empleado_Departamento" Association="Self.FK_Empleado_Departamento">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Empleado_Proyecto" Association="Self.FK_Empleado_Proyecto">
+            <End Role="Proyecto" EntitySet="Proyecto" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="proyectosdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Departamento">
+          <Key>
+            <PropertyRef Name="DepartamentoId" />
+          </Key>
+          <Property Name="DepartamentoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreDepartamento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK_Empleado_Departamento" FromRole="Departamento" ToRole="Empleado" />
+        </EntityType>
+        <EntityType Name="Empleado">
+          <Key>
+            <PropertyRef Name="EmpleadoId" />
+          </Key>
+          <Property Name="EmpleadoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombres" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellidos" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="celular" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DepartamentoId" Type="Int32" Nullable="false" />
+          <Property Name="ProyectoId" Type="Int32" />
+          <NavigationProperty Name="Departamento" Relationship="Self.FK_Empleado_Departamento" FromRole="Empleado" ToRole="Departamento" />
+          <NavigationProperty Name="Proyecto" Relationship="Self.FK_Empleado_Proyecto" FromRole="Empleado" ToRole="Proyecto" />
+        </EntityType>
+        <EntityType Name="Proyecto">
+          <Key>
+            <PropertyRef Name="ProyectoId" />
+          </Key>
+          <Property Name="ProyectoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreProyecto" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FechaInicio" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FechaFin" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Empleado" Relationship="Self.FK_Empleado_Proyecto" FromRole="Proyecto" ToRole="Empleado" />
+        </EntityType>
+        <Association Name="FK_Empleado_Departamento">
+          <End Role="Departamento" Type="Self.Departamento" Multiplicity="1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departamento">
+              <PropertyRef Name="DepartamentoId" />
+            </Principal>
+            <Dependent Role="Empleado">
+              <PropertyRef Name="DepartamentoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Empleado_Proyecto">
+          <End Role="Proyecto" Type="Self.Proyecto" Multiplicity="0..1" />
+          <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proyecto">
+              <PropertyRef Name="ProyectoId" />
+            </Principal>
+            <Dependent Role="Empleado">
+              <PropertyRef Name="ProyectoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ProyectosContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Departamento" EntityType="Self.Departamento" />
+          <EntitySet Name="Empleado" EntityType="Self.Empleado" />
+          <EntitySet Name="Proyecto" EntityType="Self.Proyecto" />
+          <AssociationSet Name="FK_Empleado_Departamento" Association="Self.FK_Empleado_Departamento">
+            <End Role="Departamento" EntitySet="Departamento" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Empleado_Proyecto" Association="Self.FK_Empleado_Proyecto">
+            <End Role="Proyecto" EntitySet="Proyecto" />
+            <End Role="Empleado" EntitySet="Empleado" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="proyectosdbModelStoreContainer" CdmEntityContainer="ProyectosContext">
+          <EntitySetMapping Name="Departamento">
+            <EntityTypeMapping TypeName="proyectosdbModel.Departamento">
+              <MappingFragment StoreEntitySet="Departamento">
+                <ScalarProperty Name="DepartamentoId" ColumnName="DepartamentoId" />
+                <ScalarProperty Name="NombreDepartamento" ColumnName="NombreDepartamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empleado">
+            <EntityTypeMapping TypeName="proyectosdbModel.Empleado">
+              <MappingFragment StoreEntitySet="Empleado">
+                <ScalarProperty Name="EmpleadoId" ColumnName="EmpleadoId" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="DepartamentoId" ColumnName="DepartamentoId" />
+                <ScalarProperty Name="ProyectoId" ColumnName="ProyectoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Proyecto">
+            <EntityTypeMapping TypeName="proyectosdbModel.Proyecto">
+              <MappingFragment StoreEntitySet="Proyecto">
+                <ScalarProperty Name="ProyectoId" ColumnName="ProyectoId" />
+                <ScalarProperty Name="NombreProyecto" ColumnName="NombreProyecto" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

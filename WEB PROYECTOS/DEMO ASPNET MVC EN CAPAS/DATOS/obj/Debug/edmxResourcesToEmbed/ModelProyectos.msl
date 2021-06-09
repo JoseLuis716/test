@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="proyectosdbModelStoreContainer" CdmEntityContainer="ProyectosContext">
+    <EntitySetMapping Name="Departamento">
+      <EntityTypeMapping TypeName="proyectosdbModel.Departamento">
+        <MappingFragment StoreEntitySet="Departamento">
+          <ScalarProperty Name="DepartamentoId" ColumnName="DepartamentoId" />
+          <ScalarProperty Name="NombreDepartamento" ColumnName="NombreDepartamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleado">
+      <EntityTypeMapping TypeName="proyectosdbModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="EmpleadoId" ColumnName="EmpleadoId" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="DepartamentoId" ColumnName="DepartamentoId" />
+          <ScalarProperty Name="ProyectoId" ColumnName="ProyectoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proyecto">
+      <EntityTypeMapping TypeName="proyectosdbModel.Proyecto">
+        <MappingFragment StoreEntitySet="Proyecto">
+          <ScalarProperty Name="ProyectoId" ColumnName="ProyectoId" />
+          <ScalarProperty Name="NombreProyecto" ColumnName="NombreProyecto" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

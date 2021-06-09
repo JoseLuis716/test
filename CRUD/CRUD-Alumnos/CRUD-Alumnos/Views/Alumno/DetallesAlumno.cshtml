@@ -1,0 +1,69 @@
+﻿@*@model CRUD_Alumnos.Models.Alumnos*@
+@model CRUD_Alumnos.Models.AlumnoCE
+
+@{
+    ViewBag.Title = "DetallesAlumno";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetallesAlumno</h2>
+
+<div>
+    <h4>Alumnos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre Completo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombres)
+
+                @*@Html.DisplayFor(model => model.NombreCompleto)*@
+         </dd>
+
+        <dt>
+            Apellidos
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellidos)
+        </dd>
+
+        <dt>
+            Edad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+        <dt>
+            Genero
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genero)
+        </dd>
+
+        <dt>
+            Fecha de registro
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Registro)
+        </dd>
+
+        <dt>
+            Ciudad
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+            @*@Html.Action("MostrarCiudad", "Alumno", new { id = Model.Cod_Ciudad })*@
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Editar", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
